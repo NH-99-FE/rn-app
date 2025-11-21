@@ -1,11 +1,11 @@
 {
   "expo": {
-    "name": "my-react-native-app",
-    "slug": "my-react-native-app",
+    "name": "MovieFlix",
+    "slug": "mobile_movie_app",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
-    "scheme": "myreactnativeapp",
+    "scheme": "movie",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {
