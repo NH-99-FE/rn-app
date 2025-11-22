@@ -13,19 +13,22 @@ import { View, Image, TextInput } from 'react-native'
 interface SearchBarProps {
   placeholder: string
   onPress?: () => void
+  value?: string
+  onChangeText?: (text: string) => void
 }
 
-export const SearchBar = ({ placeholder, onPress }: SearchBarProps) => {
+export const SearchBar = ({ placeholder, onPress, value, onChangeText }: SearchBarProps) => {
   return (
     <View className="flex-row items-center rounded-full bg-dark-200 px-5 py-4">
       <Image className="size-5" source={icons.search} resizeMode="contain" tintColor="#AB8BFF" />
       <TextInput
         className="ml-2 flex-1 text-white"
-        onPress={onPress}
         placeholder={placeholder}
-        value={''}
-        onChangeText={() => {}}
-      ></TextInput>
+        placeholderTextColor="#ffffff"
+        value={value}
+        onPress={onPress}
+        onChangeText={onChangeText}
+      />
     </View>
   )
 }
