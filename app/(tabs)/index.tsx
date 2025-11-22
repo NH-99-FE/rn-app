@@ -42,14 +42,14 @@ export default function Index() {
               <Text className="mb-3 mt-5 text-lg font-bold text-white">最新电影</Text>
               <FlatList
                 data={movies}
-                renderItem={({ item }) => <MovieCard>{}</MovieCard>}
+                renderItem={({ item }) => <MovieCard {...item}></MovieCard>}
                 keyExtractor={item => item.id?.toString()}
                 numColumns={3}
                 columnWrapperStyle={{
                   justifyContent: 'center',
-                  gap: 20,
-                  paddingRight: 5,
                   marginBottom: 10,
+                  paddingHorizontal: 0,
+                  gap: 18,
                 }}
                 className="mt-2 pb-32"
                 scrollEnabled={false}
