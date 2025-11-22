@@ -1,10 +1,7 @@
 import { useEffect, useState } from 'react'
-interface Props {
-  value: string
-  delay: number
-}
-const useDebounce = ({ value, delay }: Props) => {
-  const [debouncedValue, setDebouncedValue] = useState('')
+
+const useDebounce = <T>(value: T, delay: number) => {
+  const [debouncedValue, setDebouncedValue] = useState<T>(value)
   useEffect(() => {
     const timeoutId = setTimeout(() => {
       setDebouncedValue(value)
