@@ -11,7 +11,7 @@ import { images } from '@/constants/images'
 import { View, Image, ScrollView, Text, ActivityIndicator, FlatList } from 'react-native'
 import { SearchBar } from '@/components/search-bar'
 import { useRouter } from 'expo-router'
-import useFetch from '@/services/useFetch'
+import useFetch from '@/hooks/useFetch'
 import { fetchMovies } from '@/services/api'
 import MovieCard from '@/components/movie-card'
 
